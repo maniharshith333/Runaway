@@ -8,6 +8,12 @@ import productRouter from "./routes/productsRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from './routes/orderRoute.js'
 
+const corsConfig = {
+  origin : "*",
+  Credential: true,
+  methods: ["GET", "POST","PUT","DELETE"],
+}
+
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -16,7 +22,7 @@ connectDB();
 cloudinaryConnect();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsConfig));
 
 app.use('/api/user',userRouter);
 app.use('/api/product',productRouter);
