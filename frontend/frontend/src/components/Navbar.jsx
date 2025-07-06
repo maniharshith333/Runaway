@@ -48,7 +48,8 @@ const Navbar = () => {
       <div className="flex items-center justify-between py-5 px-4 sm:px-8 font-medium relative border-b">
         {/* Logo */}
         <Link to="/home">
-          <p className="text-xl font-bold">RUNAWAY</p>
+         <img src="/logooo.png" alt="Logo" className="h-8 w-auto sm:h-10" />
+
         </Link>
 
         {/* Desktop Nav */}
